@@ -133,7 +133,7 @@ Files:
     [contract wasm]
     => become_the_richest_schema.json <= 
     [contract schemas json]
-    => schema.[b64|bin <= 
+    => schema.[b64|bin] <= 
     [contract schemas in bin and base 64]
 ```
 
