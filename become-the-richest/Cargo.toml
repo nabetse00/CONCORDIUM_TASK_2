@@ -1,0 +1,24 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "become_the_richest"
+version = "0.1.0"
+edition = "2018"
+license = "MPL-2.0"
+authors = [ "nabetse00 <esteban.diezlaiz@gmail.com>" ]
+description = "smart contract that holds in its state the account that paid highest amount of CCD"
+
+[features]
+default = ["std"]
+std = ["concordium-std/std"]
+wee_alloc = ["concordium-std/wee_alloc"]
+
+[dependencies]
+concordium-std = {version = "6.0", default-features = false}
+
+[lib]
+crate-type=["cdylib", "rlib"]
+
+[profile.release]
+opt-level = "s"
+codegen-units = 1
